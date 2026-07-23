@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      # Unit tests only (test/unit.test.mjs): fake backend, no external
+      # dependency. test/e2e.test.mjs needs a real Ollama server with a
+      # real model pulled, which this runner doesn't have - it skips
+      # itself cleanly rather than failing when Ollama isn't reachable, but
+      # is deliberately excluded here rather than relying on that skip, so
+      # CI's job is unambiguous about what it actually verified.
+      - run: node --test test/unit.test.mjs
+      - run: node bin/judge-calibration.mjs --help
