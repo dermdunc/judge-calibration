@@ -1,0 +1,29 @@
+{
+  "name": "judge-calibration",
+  "version": "0.1.0",
+  "description": "A provider-agnostic harness for calibrating an LLM judge against held-out human verdicts: multi-persona blind scoring, a hard fail-if-any-persona-flags-a-failure-mode gate, and a not_ready/provisional/calibrated verdict based on measured agreement.",
+  "type": "module",
+  "bin": {
+    "judge-calibration": "./bin/judge-calibration.mjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "fixtures",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/unit.test.mjs",
+    "test:e2e": "node --test test/e2e.test.mjs",
+    "test:all": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dermdunc/judge-calibration"
+  }
+}
