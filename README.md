@@ -1,5 +1,10 @@
 # Judge Calibration
 
+> **Archived 2026-09-06.** Finished factory-output experiment: the harness shipped, the accompanying
+> blog post published (`agentic-tekton`), and nothing else in the estate depends on it at runtime
+> (it's cited elsewhere only as a conceptual precedent). See `docs/decisions.md` (2026-09-06) and
+> `docs/retire-promote-review.md`.
+
 **Classification:** factory-output · **Owner:** dermdunc · **Status:** experimental, v0
 
 [![CI](https://github.com/dermdunc/judge-calibration/actions/workflows/ci.yml/badge.svg)](https://github.com/dermdunc/judge-calibration/actions/workflows/ci.yml)
